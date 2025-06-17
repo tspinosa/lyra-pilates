@@ -1,0 +1,116 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: white;
+  color: #222;
+  line-height: 1.7;
+}
+header {
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+main {
+  text-align: center;
+  scroll-behavior: smooth;
+  padding-bottom: 1.5rem;
+  padding: 4rem 2rem 2.5rem 2rem;
+}
+.hero-logo .logo {
+  width: 440px;
+  height: auto;
+  margin-bottom: 1.8rem;
+}
+main h1 {
+  font-size: 2.4rem;
+  color: #4327c5;
+  margin-bottom: 1.2rem;
+}
+.cta-button {
+  display: inline-block;
+  background: #4327c5;
+  color: white;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: #2e1b92;
+}
+section.sobre {
+  padding: 1.5rem 2rem 1.5rem;
+  background: #fafaff;
+}
+.sobre .container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.sobre h2 {
+  font-size: 1.5rem;
+  color: #4327c5;
+  margin: 2.2rem 0 1rem;
+  text-align: left;
+}
+.sobre p, .sobre li {
+  font-size: 1.05rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+.sobre ul {
+  padding-left: 1.2rem;
+}
+footer {
+  padding: 2rem;
+  background: white;
+  border-top: 1px solid #eee;
+}
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.footer-container div {
+  margin: 1rem;
+}
+h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+  main h1 {
+    font-size: 1.6rem;
+  }
+  .hero-logo .logo {
+    width: 200px;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+}

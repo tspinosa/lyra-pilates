@@ -67,24 +67,22 @@
     </a>
   </div>
 </section>
-
-<section id="fotos" class="sobre">
+<section id="espaco" class="sobre">
   <div class="container">
-    <h2>Nosso Espaço</h2>
+    <h2>📸 Nosso Espaço</h2>
     <p>Conheça o ambiente acolhedor e equipado do Studio Lyra.</p>
 
     <div class="carousel">
+      <button class="carousel-btn prev" onclick="moverSlide(-1)">&#10094;</button>
       <div class="carousel-track">
-        <img src="assets/img/foto1.jpg" alt="Espaço 1">
-        <img src="assets/img/foto2.jpg" alt="Espaço 2">
-        <img src="assets/img/foto3.jpg" alt="Espaço 3">
+        <img src="assets/img/foto1.jpeg" alt="Espaço 1">
+        <img src="assets/img/foto2.jpeg" alt="Espaço 2">
+        <img src="assets/img/foto3.jpeg" alt="Espaço 3">
       </div>
-      <button class="carousel-button prev">&#10094;</button>
-      <button class="carousel-button next">&#10095;</button>
+      <button class="carousel-btn next" onclick="moverSlide(1)">&#10095;</button>
     </div>
   </div>
 </section>
-
  <section id="contato" class="sobre">
   <div class="container">
     <h2>📞 Entre em Contato</h2>
@@ -113,28 +111,18 @@
   <p style="margin: 0.2rem 0;"><a href="mailto:contato@lyrapilates.com.br">contato@lyrapilates.com.br</a></p>
 </footer>
 <script>
-  const track = document.querySelector('.carousel-track');
-  const prevButton = document.querySelector('.carousel-button.prev');
-  const nextButton = document.querySelector('.carousel-button.next');
-  const slides = document.querySelectorAll('.carousel-track img');
-  let currentIndex = 0;
+  let slideIndex = 0;
 
-  function updateCarousel() {
+  function moverSlide(n) {
+    const track = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-track img');
+    const totalSlides = slides.length;
+
+    slideIndex = (slideIndex + n + totalSlides) % totalSlides;
+
     const slideWidth = slides[0].clientWidth;
-    track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    track.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
   }
-
-  nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateCarousel();
-  });
-
-  prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateCarousel();
-  });
-
-  window.addEventListener('resize', updateCarousel);
 </script>
 </body>
 </html>

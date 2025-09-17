@@ -144,15 +144,15 @@ h4 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #4327c5;          /* roxo principal */
-  color: white;                 /* seta branca */
+  background: #4327c5;   /* roxo principal */
+  color: white;          /* seta branca */
   border: none;
   font-size: 2rem;
   cursor: pointer;
   padding: 12px 16px;
   z-index: 2;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* leve sombra */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   transition: background 0.3s ease;
 }
 
@@ -161,9 +161,9 @@ h4 {
 }
 
 .carousel-button.prev {
-  left: 15px;
+  left: 20px;   /* seta colada à esquerda */
 }
 
 .carousel-button.next {
-  right: 15px;
+  right: 20px;  /* seta colada à direita */
 }
